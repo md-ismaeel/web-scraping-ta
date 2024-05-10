@@ -43,11 +43,11 @@ const products = [];
 $("div[data-asin]").each((index, element) => {
     const name = $(element).find("span.a-size-medium.a-color-base.a-text-normal").text();
     const price = $(element).find("span.a-price-whole").text();
-    // console.log(price);
-    const rating = $(element).find()
+    const rating = $(element).find("span.a-size-base.s-underline-text").text();
+    console.log(rating);
     products.push({ name, price, rating });
 });
-console.log(products);
+// console.log(products);
 const workbook = xlsx.utils.book_new();
 const worksheet = xlsx.utils.json_to_sheet(products);
 
